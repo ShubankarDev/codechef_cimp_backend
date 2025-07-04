@@ -1,4 +1,4 @@
-This repo contains all the code and files associated with the completely functional CIMP backend system (as a part of CodeChef Club Recruitment Challenge)
+This repo contains all the code and files associated with the completely functional CIMP backend system (as a part of the CodeChef Club Recruitment Challenge)
 
 Tech Stack & Tools:
 -  Python (Flask Framework)
