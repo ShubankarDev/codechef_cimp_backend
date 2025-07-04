@@ -5,7 +5,7 @@ from routes.roles import role_bp
 
 app = Flask(__name__)
 
-# Register Blueprints
+# adding blueprints to connect all .py files in routes/ to this main app.py 
 app.register_blueprint(club_bp, url_prefix='/clubs')
 app.register_blueprint(member_bp, url_prefix='/members')
 app.register_blueprint(role_bp, url_prefix='/roles')
