@@ -6,9 +6,9 @@ club_bp = Blueprint('club_bp', __name__)
 @club_bp.route('/create', methods=['POST'])
 def create_club():
     data = request.get_json()
-    name = data['name']
-    desc = data['description']
-    category = data['category']
+    name = data.get('name')
+    desc = data.get('description')
+    category = data.get('category')
 
     conn = get_connection()
     cursor = conn.cursor()
