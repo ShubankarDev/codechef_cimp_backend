@@ -11,7 +11,7 @@ def add_member():
 
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO members (student_id, club_id) VALUES (%s, %s)", (student_id, club_id))
+    cursor.execute("INSERT INTO club_members (student_id, club_id) VALUES (%s, %s)", (student_id, club_id))
     conn.commit()
     cursor.close()
     conn.close()
@@ -26,7 +26,7 @@ def remove_member():
 
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM members WHERE student_id = %s AND club_id = %s", (student_id, club_id))
+    cursor.execute("DELETE FROM club_members WHERE student_id = %s AND club_id = %s", (student_id, club_id))
     conn.commit()
     cursor.close()
     conn.close()
