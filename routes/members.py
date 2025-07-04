@@ -6,8 +6,8 @@ member_bp = Blueprint('member_bp', __name__)
 @member_bp.route('/add', methods=['POST'])
 def add_member():
     data = request.get_json()
-    student_id = data['student_id']
-    club_id = data['club_id']
+    student_id = data.get('student_id')
+    club_id = data.get('club_id')
 
     conn = get_connection()
     cursor = conn.cursor()
@@ -21,8 +21,8 @@ def add_member():
 @member_bp.route('/remove', methods=['POST'])
 def remove_member():
     data = request.get_json()
-    student_id = data['student_id']
-    club_id = data['club_id']
+    student_id = data.get('student_id')
+    club_id = data.get('club_id')
 
     conn = get_connection()
     cursor = conn.cursor()

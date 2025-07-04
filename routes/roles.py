@@ -6,8 +6,8 @@ role_bp = Blueprint('role_bp', __name__)
 @role_bp.route('/assign-president', methods=['POST'])
 def assign_president():
     data = request.get_json()
-    student_id = data['student_id']
-    club_id = data['club_id']
+    student_id = data.get('student_id')
+    club_id = data.get('club_id')
 
     conn = get_connection()
     cursor = conn.cursor()
@@ -21,8 +21,8 @@ def assign_president():
 @role_bp.route('/assign-faculty', methods=['POST'])
 def assign_faculty():
     data = request.get_json()
-    faculty_id = data['faculty_id']
-    club_id = data['club_id']
+    faculty_id = data.get('faculty_id')
+    club_id = data.get('club_id')
 
     conn = get_connection()
     cursor = conn.cursor()
