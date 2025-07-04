@@ -1,0 +1,8 @@
+.env 
+#this .env file is added to gitignore because it has credentials of the database
+__pycache__/
+*.pyc
+.vscode/
+*.sql
+*.log
+
